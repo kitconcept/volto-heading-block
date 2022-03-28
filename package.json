@@ -1,5 +1,5 @@
 {
-  "name": "volto-heading-block",
+  "name": "@kitconcept/volto-heading-block",
   "version": "0.1.0",
   "description": "volto-heading-block: Volto add-on",
   "main": "src/index.js",
@@ -14,6 +14,7 @@
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
   },
   "dependencies": {
-    "@plone/scripts": "*"
+    "@plone/scripts": "*",
+    "react-contenteditable": "3.3.6"
   }
 }
