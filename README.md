@@ -1,4 +1,4 @@
-# Volto Heading Block <img src="https://raw.githubusercontent.com/plone/pastanaga-icons/master/Icons/divide-horizontal.svg">
+# Volto Heading Block
 
 [![NPM](https://img.shields.io/npm/v/@kitconcept/volto-heading-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
 [![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
