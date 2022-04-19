@@ -12,6 +12,8 @@
 
 ### Internal
 
+- Added github workflows @robgietema
+
 ## 1.0.0-alpha.1 (2021-10-23)
 
 ### Feature
