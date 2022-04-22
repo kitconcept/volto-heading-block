@@ -2,10 +2,6 @@
 
 ## 1.0.0 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
 - Fix heading block @iRohitSingh
