@@ -4,11 +4,19 @@
 
 ### Breaking
 
+- Overhauled the `Edit` component now it's class-styled since `react-contenteditable` and the `content-editable` browser feature has some problems with the functional lifecycle @sneridagh
+
 ### Feature
+
+- Better self-focus management @sneridagh
 
 ### Bugfix
 
+- Do not allow line breaks @sneridagh
+
 ### Internal
+
+- Remove from npm packaging `README` resources @sneridagh
 
 ## 1.0.0 (2022-04-22)
 

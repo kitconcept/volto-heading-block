@@ -18,10 +18,6 @@ export default (config) => {
     default_tag: 'h2',
     allowed_headings: ['h2', 'h3'],
     show_alignment: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
   };
 
   return config;
