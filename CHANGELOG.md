@@ -9,6 +9,7 @@
 ### Feature
 
 - Better self-focus management @sneridagh
+- Add support for new Volto 16 styling wrapper @sneridagh
 
 ### Bugfix
 

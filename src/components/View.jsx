@@ -1,16 +1,17 @@
 import React from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers';
+import cx from 'classnames';
 import config from '@plone/volto/registry';
 
 const HeadingView = (props) => {
-  const { data } = props;
+  const { className, data } = props;
   const Element = data.tag || 'h2';
   const show_alignment = config.blocks?.blocksConfig?.heading?.show_alignment;
 
   return (
     <>
       {data && (
-        <div className="block heading">
+        <div className={cx('block heading', className)}>
           <div className="heading-wrapper">
             <Element
               style={show_alignment ? { textAlign: data.alignment } : {}}
