@@ -4,3 +4,5 @@ Makefile
 jest-addon.config.js
 cypress.json
 __snapshots__
+screencast.gif
+screenshot.png
