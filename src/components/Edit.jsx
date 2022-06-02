@@ -33,48 +33,50 @@ class HeadingEdit extends React.Component {
 
     return (
       <div className="block heading">
-        <ContentEditable
-          innerRef={this.editable}
-          className="editable"
-          style={show_alignment ? { textAlign: data.alignment } : {}}
-          tagName={data.tag ?? 'h2'}
-          html={this.state.html} // innerHTML of the editable div
-          onChange={this.handleChange} // handle innerHTML change
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              e.stopPropagation();
-              this.props.onSelectBlock(
-                this.props.onAddBlock(
-                  config.settings.defaultBlockType,
-                  this.props.index + 1,
-                ),
-              );
-            } else if (e.key === 'ArrowUp') {
-              e.preventDefault();
-              e.stopPropagation();
-              this.props.onFocusPreviousBlock(
-                this.props.block,
-                this.editable.current,
-              );
-            } else if (e.key === 'ArrowDown') {
-              e.preventDefault();
-              e.stopPropagation();
-              this.props.onFocusNextBlock(
-                this.props.block,
-                this.editable.current,
-              );
-            }
-          }}
-        />
-        <SidebarPortal selected={selected}>
-          <HeadingSidebar
-            {...this.props}
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
+        <div className="heading-wrapper">
+          <ContentEditable
+            innerRef={this.editable}
+            className="editable"
+            style={show_alignment ? { textAlign: data.alignment } : {}}
+            tagName={data.tag ?? 'h2'}
+            html={this.state.html} // innerHTML of the editable div
+            onChange={this.handleChange} // handle innerHTML change
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+                this.props.onSelectBlock(
+                  this.props.onAddBlock(
+                    config.settings.defaultBlockType,
+                    this.props.index + 1,
+                  ),
+                );
+              } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                e.stopPropagation();
+                this.props.onFocusPreviousBlock(
+                  this.props.block,
+                  this.editable.current,
+                );
+              } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                e.stopPropagation();
+                this.props.onFocusNextBlock(
+                  this.props.block,
+                  this.editable.current,
+                );
+              }
+            }}
           />
-        </SidebarPortal>
+          <SidebarPortal selected={selected}>
+            <HeadingSidebar
+              {...this.props}
+              data={data}
+              block={block}
+              onChangeBlock={onChangeBlock}
+            />
+          </SidebarPortal>
+        </div>
       </div>
     );
   };
