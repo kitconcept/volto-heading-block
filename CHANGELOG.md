@@ -2,17 +2,12 @@
 
 ## 2.0.1 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
 - Fix default value for heading text @sneridagh
 - Move the type of block to `text` group @sneridagh
 - Cleanup if html is pasted, convert it to plain text @sneridagh
-
-### Internal
+- Add inner container to edit mode @sneridagh
 
 ## 2.0.0 (2022-05-26)
 
