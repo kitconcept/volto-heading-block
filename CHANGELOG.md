@@ -8,6 +8,10 @@
 
 ### Bugfix
 
+- Fix default value for heading text @sneridagh
+- Move the type of block to `text` group @sneridagh
+- Cleanup if html is pasted, convert it to plain text @sneridagh
+
 ### Internal
 
 ## 2.0.0 (2022-05-26)

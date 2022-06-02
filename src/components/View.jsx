@@ -17,7 +17,7 @@ const HeadingView = (props) => {
               style={show_alignment ? { textAlign: data.alignment } : {}}
               className="heading"
             >
-              {data?.heading}
+              {data?.heading || ''}
             </Element>
           </div>
         </div>

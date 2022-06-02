@@ -9,7 +9,7 @@ class HeadingEdit extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      html: props.data.heading,
+      html: props.data.heading || '',
     };
   }
 
@@ -22,8 +22,9 @@ class HeadingEdit extends React.Component {
 
   handleChange = (event) => {
     const { block, data } = this.props;
-    this.setState({ html: event.target.value });
-    this.props.onChangeBlock(block, { ...data, heading: event.target.value });
+    const cleanedText = event.target.value.replace(/<[^>]*>/g, '');
+    this.setState({ html: cleanedText });
+    this.props.onChangeBlock(block, { ...data, heading: cleanedText });
   };
 
   render = () => {
