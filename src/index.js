@@ -8,7 +8,7 @@ export default (config) => {
     id: 'heading',
     title: 'Heading',
     icon: headingSVG,
-    group: 'common',
+    group: 'text',
     view: HeadingViewBlock,
     edit: HeadingEditBlock,
     restricted: false,
