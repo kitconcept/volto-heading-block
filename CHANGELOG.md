@@ -6,6 +6,8 @@
 
 ### Feature
 
+- Remove option to chose heading order when only one heading type is selected @kindermann
+
 ### Bugfix
 
 ### Internal

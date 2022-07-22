@@ -45,7 +45,10 @@ export const headingSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['tag', ...(show_alignment ? ['alignment'] : [])],
+        fields: [
+          ...(allowed_headings.length > 1 ? ['tag'] : []),
+          ...(show_alignment ? ['alignment'] : []),
+        ],
       },
     ],
 
