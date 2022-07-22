@@ -1,6 +1,6 @@
 # Change Log
 
-## 2.0.2 (unreleased)
+## 2.1.0 (2022-07-22)
 
 ### Feature
 
