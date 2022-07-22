@@ -2,15 +2,9 @@
 
 ## 2.0.2 (unreleased)
 
-### Breaking
-
 ### Feature
 
 - Remove option to chose heading order when only one heading type is selected @kindermann
-
-### Bugfix
-
-### Internal
 
 ## 2.0.1 (2022-06-02)
 
