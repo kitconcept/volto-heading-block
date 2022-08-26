@@ -22,8 +22,10 @@ class HeadingEdit extends React.Component {
 
   handleChange = (event) => {
     const { block, data } = this.props;
-    const cleanedText = event.target.value.replace(/<[^>]*>/g, '');
-    this.setState({ html: cleanedText });
+    const cleanedText = event.target.value
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/&nbsp;/g, ' ');
+    this.setState({ html: event.target.value });
     this.props.onChangeBlock(block, { ...data, heading: cleanedText });
   };
 
