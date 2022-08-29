@@ -2,15 +2,9 @@
 
 ## 2.1.1 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
 - Fix editor can't add a blank in firefox @iFlameing
-
-### Internal
 
 ## 2.1.0 (2022-07-22)
 
