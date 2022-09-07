@@ -25,7 +25,7 @@ class HeadingEdit extends React.Component {
     const cleanedText = event.target.value
       .replace(/<[^>]*>/g, ' ')
       .replace(/&nbsp;/g, ' ');
-    this.setState({ html: cleanedText });
+    this.setState({ html: event.target.value });
     this.props.onChangeBlock(block, { ...data, heading: cleanedText });
   };
 
