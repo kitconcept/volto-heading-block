@@ -15,6 +15,7 @@
 ### Bugfix
 
 - Fix editor can't add a blank in firefox @iFlameing
+- Fix copied and pasting from heading block to heading block will create html for antother heading block inside the one pasted in @jackahl
 
 ## 2.1.0 (2022-07-22)
 
