@@ -8,6 +8,8 @@
 
 ### Bugfix
 
+- Fix copied and pasting from heading block to heading block will create html for antother heading block inside the one pasted in @jackahl
+
 ### Internal
 
 ## 2.1.1 (2022-08-29)

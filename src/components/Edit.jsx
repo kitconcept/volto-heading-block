@@ -25,7 +25,11 @@ class HeadingEdit extends React.Component {
     const cleanedText = event.target.value
       .replace(/<[^>]*>/g, ' ')
       .replace(/&nbsp;/g, ' ');
-    this.setState({ html: event.target.value });
+    if (event.nativeEvent.inputType === 'insertFromPaste') {
+      this.setState({ html: cleanedText });
+    } else {
+      this.setState({ html: event.target.value });
+    }
     this.props.onChangeBlock(block, { ...data, heading: cleanedText });
   };
 
