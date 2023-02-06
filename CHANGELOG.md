@@ -8,6 +8,8 @@
 
 ### Bugfix
 
+- Fix decoding of html entities @reebalazs
+
 ### Internal
 
 ## 2.1.2 (2022-09-12)
