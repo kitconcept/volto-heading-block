@@ -7,7 +7,7 @@
 ### Feature
 
 ### Bugfix
-
+- Added tocEntry prop to fix integration with ToC-Block @danalvrz
 ### Internal
 
 ## 2.1.2 (2022-09-12)
