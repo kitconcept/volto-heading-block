@@ -18,6 +18,11 @@ export default (config) => {
     default_tag: 'h2',
     allowed_headings: ['h2', 'h3'],
     show_alignment: false,
+    // integration with volto-block-toc
+    tocEntry: (block = {}) => {
+      const { tag, heading } = block;
+      return heading && tag ? [parseInt(tag.slice(1)), heading] : null;
+    },
   };
 
   return config;
