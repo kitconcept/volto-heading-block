@@ -13,9 +13,7 @@ context('Block Acceptance Tests', () => {
 
   it('As editor I can add a Heading block', () => {
     cy.visit('/document/edit');
-    cy.get('.block.inner.text .public-DraftEditor-content').click();
-    cy.get('.button .block-add-button').click({ force: true });
-    cy.get('.blocks-chooser .mostUsed .button.heading').click();
+    cy.addNewBlock('heading');
     cy.get('#toolbar-save').click();
   });
 });
