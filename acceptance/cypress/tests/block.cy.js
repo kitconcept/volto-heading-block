@@ -35,17 +35,16 @@ context('Block Acceptance Tests', () => {
     );
   });
 
-  // it('As editor I can add a Heading block with special characters', () => {
-  //   cy.visit('/document/edit');
-  //   cy.addNewBlock('heading');
-  //   cy.get(".editable").click().type(" } { & ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] \ | : , < . > / ? ");
-  //   cy.get('#toolbar-save').click();
-  //   cy.visit('/document');
-  //   cy.get('h2:contains( } { & ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] \ | : , < . > / ? )').should(
-  //     'be.visible',
-  //   );;
-  // });
-
+  it('As editor I can add a Heading block with special characters', () => {
+    cy.visit('/document/edit');
+    cy.addNewBlock('heading');
+    cy.get(".editable").click().type("& ` ~ ! @ # $ % ^ & * - _ = + [ ] ; : , . < > / ? /(/)/}/{");
+    cy.get('#toolbar-save').click();
+    cy.visit('/document');
+    cy.get('h2:contains(& ` ~ ! @ # $ % ^ & * - _ = + [ ] ; : , . < > / ? /(/)/}/{)').should(
+      'be.visible',
+    );
+  });
 
    it('As editor I can add a Heading block with html encodable characters', () => {
     cy.visit('/document/edit');
@@ -55,7 +54,16 @@ context('Block Acceptance Tests', () => {
     cy.visit('/document');
     cy.get('h2:contains(&nbsp &#160 < &lt &#60 > &gt &#62 & &amp &#38 ”) ').should(
       'be.visible',
-    );;
+    );
+  });
+
+   it('As editor I can add a Heading block with html tags', () => {
+    cy.visit('/document/edit');
+    cy.addNewBlock('heading');
+    cy.get(".editable").click().type("<script>document.getElementById();</script> <a href=“foo”>whatever</a>");
+    cy.get('#toolbar-save').click();
+    cy.visit('/document');
+    cy.get('h2:contains(<script>document.getElementById();</script> <a href=“foo”>whatever</a>)').should('be.visible');
   });
 
 });
