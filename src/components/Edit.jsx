@@ -5,6 +5,32 @@ import { SidebarPortal } from '@plone/volto/components';
 import HeadingSidebar from './Sidebar';
 import config from '@plone/volto/registry';
 
+// Source: https://stackoverflow.com/questions/5796718/html-entity-decode
+var decodeHTMLEntities = (function () {
+  if (__SERVER__) {
+    return () => {
+      throw new Error('DecodeHTMLEntities is not supported in SSR.');
+    };
+  }
+  // closure to avoid creating the object each time
+  var element = document.createElement('div');
+
+  function decodeHTMLEntities(str) {
+    if (str && typeof str === 'string') {
+      // strip script/html tags
+      str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, '');
+      str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, '');
+      element.innerHTML = str;
+      str = element.textContent;
+      element.textContent = '';
+    }
+
+    return str;
+  }
+
+  return decodeHTMLEntities;
+})();
+
 class HeadingEdit extends React.Component {
   constructor(props) {
     super();
@@ -22,9 +48,9 @@ class HeadingEdit extends React.Component {
 
   handleChange = (event) => {
     const { block, data } = this.props;
-    const cleanedText = event.target.value
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/&nbsp;/g, ' ');
+    // Strip all html tags and decode html entities. Apparently this is
+    // necessary.
+    const cleanedText = decodeHTMLEntities(event.target.value);
     if (event.nativeEvent.inputType === 'insertFromPaste') {
       this.setState({ html: cleanedText });
     } else {
