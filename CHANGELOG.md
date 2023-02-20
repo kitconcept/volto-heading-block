@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.0 (2023-02-20)
+
+### Feature
+
+- Move to the new add-on testing based on docker @sneridagh [#13](https://github.com/kitconcept/volto-export/pull/13)
+
+### Bugfix
+
+- Fix decoding of html entities @reebalazs [#10](https://github.com/kitconcept/volto-export/pull/10)
+- Include headings in the volto Table of Contents block. @danalvrz [#12](https://github.com/kitconcept/volto-export/pull/12)
+
+
 ## 2.1.2 (2022-09-12)
 
 ### Bugfix
