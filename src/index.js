@@ -3,7 +3,7 @@ import HeadingViewBlock from './components/View';
 import HeadingEditBlock from './components/Edit';
 import './theme/main.less';
 
-export default (config) => {
+const applyConfig = (config) => {
   config.blocks.blocksConfig.heading = {
     id: 'heading',
     title: 'Heading',
@@ -27,3 +27,5 @@ export default (config) => {
 
   return config;
 };
+
+export default applyConfig;
