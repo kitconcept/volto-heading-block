@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 2.4.0 (2023-09-14)
+
+### Feature
+
+- Update docker and CI config @sneridagh [#18](https://github.com/kitconcept/volto-export/pull/18)
+
+### Bugfix
+
+- Remove anonymous default export @sneridagh [#16](https://github.com/kitconcept/volto-export/pull/16)
+
+
 ## 2.3.0 (2023-06-06)
 
 ### Feature
