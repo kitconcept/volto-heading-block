@@ -1,4 +1,4 @@
-# Volto Heading Block
+# @kitconcept/volto-heading-block
 
 [![NPM](https://img.shields.io/npm/v/@kitconcept/volto-heading-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
 [![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
@@ -53,7 +53,17 @@ yarn start
 
 Go to http://localhost:3000, login, create a new page. The heading block will show up in the Volto blocks chooser.
 
-# Credits
+## Block configuration
+
+## `show_alignment`
+
+This option will enable an alignment widget in the block settings, allowing you to align the text of the heading. By default, it is set to `false`.
+
+```js
+config.blocks.blocksConfig.heading.show_alignment = true;
+```
+
+## Credits
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-blocks/raw/master/fz-juelich.svg" width="200px" />
 
