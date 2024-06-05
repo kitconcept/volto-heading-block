@@ -4006,7 +4006,9 @@ packages:
       source-map: 0.6.1
       string-length: 2.0.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: true
 
   /@jest/reporters@26.6.2:
@@ -5630,16 +5632,6 @@ packages:
       - '@swc/helpers'
     dev: true
 
-  /@parcel/plugin@2.12.0(@parcel/core@2.12.0)(@swc/helpers@0.5.11):
-    resolution: {integrity: sha512-nc/uRA8DiMoe4neBbzV6kDndh/58a4wQuGKw5oEoIwBCHUvE2W8ZFSu7ollSXUGRzfacTt4NdY8TwS73ScWZ+g==}
-    engines: {node: '>= 12.0.0'}
-    dependencies:
-      '@parcel/types': 2.12.0(@parcel/core@2.12.0)(@swc/helpers@0.5.11)
-    transitivePeerDependencies:
-      - '@parcel/core'
-      - '@swc/helpers'
-    dev: true
-
   /@parcel/profiler@2.12.0:
     resolution: {integrity: sha512-q53fvl5LDcFYzMUtSusUBZSjQrKjMlLEBgKeQHFwkimwR1mgoseaDBDuNz0XvmzDzF1UelJ02TUKCGacU8W2qA==}
     engines: {node: '>= 12.0.0'}
@@ -5833,7 +5825,7 @@ packages:
     dependencies:
       '@parcel/core': 2.12.0
       '@parcel/diagnostic': 2.12.0
-      '@parcel/plugin': 2.12.0(@parcel/core@2.12.0)(@swc/helpers@0.5.11)
+      '@parcel/plugin': 2.12.0(@parcel/core@2.12.0)
       '@parcel/rust': 2.12.0
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.12.0
@@ -6013,21 +6005,6 @@ packages:
     dev: true
 
   /@parcel/types@2.12.0(@parcel/core@2.12.0):
-    resolution: {integrity: sha512-8zAFiYNCwNTQcglIObyNwKfRYQK5ELlL13GuBOrSMxueUiI5ylgsGbTS1N7J3dAGZixHO8KhHGv5a71FILn9rQ==}
-    dependencies:
-      '@parcel/cache': 2.12.0(@parcel/core@2.12.0)
-      '@parcel/diagnostic': 2.12.0
-      '@parcel/fs': 2.12.0(@parcel/core@2.12.0)
-      '@parcel/package-manager': 2.12.0(@parcel/core@2.12.0)(@swc/helpers@0.5.11)
-      '@parcel/source-map': 2.1.1
-      '@parcel/workers': 2.12.0(@parcel/core@2.12.0)
-      utility-types: 3.11.0
-    transitivePeerDependencies:
-      - '@parcel/core'
-      - '@swc/helpers'
-    dev: true
-
-  /@parcel/types@2.12.0(@parcel/core@2.12.0)(@swc/helpers@0.5.11):
     resolution: {integrity: sha512-8zAFiYNCwNTQcglIObyNwKfRYQK5ELlL13GuBOrSMxueUiI5ylgsGbTS1N7J3dAGZixHO8KhHGv5a71FILn9rQ==}
     dependencies:
       '@parcel/cache': 2.12.0(@parcel/core@2.12.0)
@@ -10068,7 +10045,7 @@ packages:
     resolution: {integrity: sha512-Sr2fYMBUVGYq8kj3UthXFAu5UN6ZW+rYr4NACjZQJvHvj+c8lYv0CahmZ2P/r7iUkN44gGUBwqxZkrKXYPb7cw==}
     dependencies:
       '@types/expect': 1.20.4
-      '@types/node': 15.14.9
+      '@types/node': 20.14.2
 
   /@types/ws@8.5.10:
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
@@ -18570,9 +18547,7 @@ packages:
       pretty-format: 24.9.0
       throat: 4.1.0
     transitivePeerDependencies:
-      - bufferutil
       - supports-color
-      - utf-8-validate
     dev: true
 
   /jest-jasmine2@26.6.3:
