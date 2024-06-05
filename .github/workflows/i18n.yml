@@ -1,4 +1,4 @@
-name: Code analysis checks
+name: i18n
 on:
   push:
     paths:
@@ -11,7 +11,7 @@ env:
   NODE_VERSION: 20.x
 
 jobs:
-  codeanalysis:
+  unit:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,5 +42,5 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: Linting
-        run: make lint
+      - name: test i18n command
+        run: make i18n
