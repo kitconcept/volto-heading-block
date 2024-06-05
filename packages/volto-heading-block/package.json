@@ -27,7 +27,8 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
-    "@plone/components": "1.7.0"
+    "@plone/components": "1.7.0",
+    "react-contenteditable": "3.3.6"
   },
   "peerDependencies": {
     "react": "18.2.0",
