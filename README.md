@@ -1,23 +1,22 @@
-# @kitconcept/volto-heading-block
+# Volto Heading Block (@kitconcept/volto-heading-block)
 
-[![NPM](https://img.shields.io/npm/v/@kitconcept/volto-heading-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/acceptance.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
+A heading block for Volto
 
-![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
+[![npm](https://img.shields.io/npm/v/@kitconcept/volto-heading-block)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-heading-block/)
+[![Code analysis checks](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml)
+[![Unit tests](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml)
 
-The Volto Heading Block allows editors to add a heading to a Volto page.
+## Features
 
-## Screenshot
-
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screenshot.png)
-
-## Screencast
-
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screencast.gif)
+<!-- List your awesome features here -->
 
 ## Installation
+
+To install your project, you must choose the method appropriate to your version of Volto.
+
+
+### Volto 17 and earlier
 
 Create a new Volto project (you can skip this step if you already have one):
 
@@ -27,9 +26,9 @@ yo @plone/volto my-volto-project --addon @kitconcept/volto-heading-block
 cd my-volto-project
 ```
 
-Add `@kitconcept/volto-heading-block`to your package.json:
+Add `@kitconcept/volto-heading-block` to your package.json:
 
-```
+```JSON
 "addons": [
     "@kitconcept/volto-heading-block"
 ],
@@ -45,30 +44,150 @@ Download and install the new add-on by running:
 yarn install
 ```
 
-Start Volto with:
+Start volto with:
 
 ```
 yarn start
 ```
 
-Go to http://localhost:3000, login, create a new page. The heading block will show up in the Volto blocks chooser.
+### Volto 18 and later
 
-## Block configuration
+Add `@kitconcept/volto-heading-block` to your `package.json`:
 
-## `show_alignment`
-
-This option will enable an alignment widget in the block settings, allowing you to align the text of the heading. By default, it is set to `false`.
-
-```js
-config.blocks.blocksConfig.heading.show_alignment = true;
+```json
+"dependencies": {
+    "@kitconcept/volto-heading-block": "*"
+}
 ```
 
-## Credits
+Add `@kitconcept/volto-heading-block` to your `volto.config.js`:
 
-<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-blocks/raw/master/fz-juelich.svg" width="200px" />
+```javascript
+const addons = ['@kitconcept/volto-heading-block'];
+```
 
-The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de).
+If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
-# License
+```javascript
+const theme = '@kitconcept/volto-heading-block';
+```
+
+## Test installation
+
+Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
+
+
+## Development
+
+The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
+For this reason, it only works with pnpm and Volto 18 (currently in alpha).
+
+
+### Pre-requisites
+
+-   [Node.js](https://6.docs.plone.org/install/create-project.html#node-js)
+-   [Make](https://6.docs.plone.org/install/create-project.html#make)
+-   [Docker](https://6.docs.plone.org/install/create-project.html#docker)
+
+
+### Make convenience commands
+
+Run `make help` to list the available commands.
+
+```text
+help                                 Show this help
+install                              Installs the dev environment using mrs-developer
+i18n                                 Sync i18n
+format                               Format codebase
+lint                                 Lint Codebase
+test                                 Run unit tests
+test-ci                              Run unit tests in CI
+storybook-start                      Start Storybook server on port 6006
+storybook-build                      Build Storybook
+start-backend-docker                 Starts a Docker-based backend for developing
+start-test-acceptance-frontend-dev   Start acceptance frontend in dev mode
+start-test-acceptance-frontend       Start acceptance frontend in prod mode
+start-test-acceptance-server         Start acceptance server
+test-acceptance                      Start Cypress in interactive mode
+test-acceptance-headless             Run cypress tests in headless mode for CI
+```
+
+### Development environment set up
+
+Install package requirements.
+
+```shell
+make install
+```
+
+### Start developing
+
+Start the backend.
+
+```shell
+make start-backend-docker
+```
+
+In a separate terminal session, start the frontend.
+
+```shell
+pnpm start
+```
+
+### Lint code
+
+Run ESlint, Prettier, and Stylelint in analyze mode.
+
+```shell
+make lint
+```
+
+### Format code
+
+Run ESlint, Prettier, and Stylelint in fix mode.
+
+```shell
+make format
+```
+
+### i18n
+
+Extract the i18n messages to locales.
+
+```shell
+make i18n
+```
+
+### Unit tests
+
+Run unit tests.
+
+```shell
+make test
+```
+
+### Run Cypress tests
+
+Run each of these steps in separate terminal sessions.
+
+In the first session, start the frontend in development mode.
+
+```shell
+make start-test-acceptance-frontend-dev
+```
+
+In the second session, start the backend acceptance server.
+
+```shell
+make start-test-acceptance-server
+```
+
+In the third session, start the Cypress interactive test runner.
+
+```shell
+make test-acceptance
+```
+
+## License
 
 The project is licensed under the MIT license.
