@@ -15,17 +15,17 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#. Default: "Alignment"
 #: components/schema
-# defaultMessage: Alignment
 msgid "Alignment"
 msgstr "Uitlijning"
 
+#. Default: "Heading"
 #: components/schema
-# defaultMessage: Heading
 msgid "Heading"
 msgstr "Kop"
 
+#. Default: "Heading level"
 #: components/schema
-# defaultMessage: Heading level
 msgid "Heading level"
 msgstr "Kop niveau"

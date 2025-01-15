@@ -1,7 +1,7 @@
 import 'cypress-axe';
 import 'cypress-file-upload';
 import './commands';
-import { setup, teardown } from './reset-fixture';
+import { setup, teardown } from '@plone/volto/cypress/support/reset-fixture';
 
 beforeEach(function () {
   cy.log('Setting up API fixture');

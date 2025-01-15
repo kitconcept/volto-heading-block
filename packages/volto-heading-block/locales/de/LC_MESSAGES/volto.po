@@ -16,17 +16,17 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#. Default: "Alignment"
 #: components/schema
-# defaultMessage: Alignment
 msgid "Alignment"
 msgstr "Ausrichtung"
 
+#. Default: "Heading"
 #: components/schema
-# defaultMessage: Heading
 msgid "Heading"
 msgstr "Überschrift"
 
+#. Default: "Heading level"
 #: components/schema
-# defaultMessage: Heading level
 msgid "Heading level"
 msgstr "Überschrift Niveau"

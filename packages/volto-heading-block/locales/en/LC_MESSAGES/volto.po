@@ -11,17 +11,17 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#. Default: "Alignment"
 #: components/schema
-# defaultMessage: Alignment
 msgid "Alignment"
 msgstr ""
 
+#. Default: "Heading"
 #: components/schema
-# defaultMessage: Heading
 msgid "Heading"
 msgstr ""
 
+#. Default: "Heading level"
 #: components/schema
-# defaultMessage: Heading level
 msgid "Heading level"
 msgstr ""
