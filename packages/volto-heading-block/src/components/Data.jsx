@@ -23,5 +23,5 @@ const HeadingData = (props) => {
     />
   );
 };
-//comment
+
 export default HeadingData;
