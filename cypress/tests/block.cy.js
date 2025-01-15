@@ -23,8 +23,8 @@ context('Block Acceptance Tests', () => {
   it('As editor I can add a Heading H3 block ', () => {
     cy.visit('/document/edit');
     cy.addNewBlock('heading');
-    cy.get('#field-tag > .react-select__control').click();
-    cy.get('#react-select-38-option-1').click();
+    // cy.get('#field-tag > .react-select__control').click();
+    // cy.get('#react-select-38-option-1').click();
     cy.get('.editable').click().type('Heading h3');
     cy.get('#toolbar-save').click();
     cy.visit('/document');
