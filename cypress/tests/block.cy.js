@@ -24,7 +24,9 @@ context('Block Acceptance Tests', () => {
   it('As editor I can add a Heading H3 block ', () => {
     cy.visit('/document/edit');
     cy.addNewBlock('heading');
-    cy.get('#field-tag > .react-select__control > .react-select__indicators >')
+    cy.get(
+      '#field-tag > .react-select__control > .react-select__indicators > .react-select__dropdown-indicator',
+    )
       .trigger('click')
       .findByText('h3')
       .click();
