@@ -23,12 +23,12 @@ context('Block Acceptance Tests', () => {
   it('As editor I can add a Heading H3 block ', () => {
     cy.visit('/document/edit');
     cy.addNewBlock('heading');
-    // cy.get('#field-tag > .react-select__control').click();
-    // cy.get('#react-select-38-option-1').click();
-    // cy.get('.editable').click().type('Heading h3');
-    // cy.get('#toolbar-save').click();
-    // cy.visit('/document');
-    // cy.get('h3:contains(Heading h3)').should('be.visible');
+    cy.get('#field-tag > .react-select__control').click();
+    cy.get('#react-select-38-option-1').click();
+    cy.get('.editable').click().type('Heading h3');
+    cy.get('#toolbar-save').click();
+    cy.visit('/document');
+    cy.get('h3:contains(Heading h3)').should('be.visible');
   });
 
   it('As editor I can add a Heading block with special characters', () => {
