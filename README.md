@@ -7,9 +7,21 @@ A heading block for Volto
 [![Code analysis checks](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml)
 
+![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
+
+The Volto Heading Block allows editors to add a heading to a Volto page.
+
+
 ## Features
 
 <!-- List your awesome features here -->
+## Screenshot
+
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screenshot.png)
+
+## Screencast
+
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screencast.gif)
 
 ## Installation
 

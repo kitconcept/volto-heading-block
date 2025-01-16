@@ -27,6 +27,7 @@ DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
 ADDON_NAME='@kitconcept/volto-heading-block'
+ADDON_PATH='volto-heading-block'
 
 .PHONY: help
 help: ## Show this help
