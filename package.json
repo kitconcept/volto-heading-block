@@ -2,7 +2,8 @@
   "name": "@kitconcept/volto-heading-block",
   "version": "2.4.0",
   "description": "volto-heading-block: Volto add-on that provides a configurable heading block",
-  "main": "src/index.js",
+  "author": "kitconcept, GmbH",
+  "homepage": "https://github.com/kitconcept/volto-heading-block",
   "license": "MIT",
   "keywords": [
     "volto-addon",
@@ -10,23 +11,29 @@
     "plone",
     "react"
   ],
-  "author": "kitconcept GmbH",
-  "homepage": "https://github.com/kitconcept/volto-button-block#readme",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
-    "cypress:open": "NODE_ENV=production ../../../node_modules/cypress/bin/cypress open",
-    "cypress:run": "NODE_ENV=test ../../../node_modules/cypress/bin/cypress run",
-    "cypress:start-frontend": "cd ../../../ && RAZZLE_API_PATH=http://localhost:55001/plone yarn start",
-    "ci:test-acceptance-server": "make test-acceptance-server",
-    "cy:test:fixture:setup": "node cypress/support/reset-fixture.js",
-    "cy:test:fixture:teardown": "node cypress/support/reset-fixture.js teardown",
-    "dry-release": "release-it --dry-run",
-    "release": "release-it",
-    "release-major-alpha": "release-it major --preRelease=alpha",
-    "release-alpha": "release-it --preRelease=alpha"
+    "preinstall": "npx only-allow pnpm",
+    "start": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
+    "start:prod": "pnpm --filter @plone/volto start:prod",
+    "build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
+    "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
+    "i18n": "pnpm --filter @kitconcept/volto-heading-block i18n && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n",
+    "test": "RAZZLE_JEST_CONFIG=$(pwd)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests",
+    "lint": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --max-warnings=0 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --fix 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "prettier": "prettier --check 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'packages/**/src/**/*.{js,jsx,ts,tsx}' ",
+    "stylelint": "stylelint 'packages/**/src/**/*.{css,scss,less}' --allow-empty-input",
+    "stylelint:fix": "stylelint 'packages/**/src/**/*.{css,scss,less}' --fix --allow-empty-input",
+    "dry-release": "pnpm --filter @kitconcept/volto-heading-block dry-release",
+    "release": "pnpm --filter @kitconcept/volto-heading-block release",
+    "release-major-alpha": "pnpm --filter @kitconcept/volto-heading-block release-major-alpha",
+    "release-alpha": "pnpm --filter @kitconcept/volto-heading-block release-alpha",
+    "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
+    "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "prettier": {
     "trailingComma": "all",
@@ -77,12 +84,19 @@
       ]
     }
   },
-  "devDependencies": {
-    "@plone/scripts": "^2.3.0",
-    "release-it": "^15.6.0"
-  },
   "dependencies": {
-    "react-contenteditable": "3.3.6"
+    "@plone/volto": "workspace:*",
+    "@plone/registry": "workspace:*",
+    "@kitconcept/volto-heading-block": "workspace:*"
   },
-  "packageManager": "yarn@3.2.3"
+  "devDependencies": {
+    "mrs-developer": "^2.2.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+      "react-refresh": "^0.14.2"
+    }
+  },
+  "packageManager": "pnpm@9.4.0"
 }

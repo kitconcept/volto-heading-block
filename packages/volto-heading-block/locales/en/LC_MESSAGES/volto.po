@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Alignment"
+#: components/schema
+msgid "Alignment"
+msgstr ""
+
+#. Default: "Heading"
+#: components/schema
+msgid "Heading"
+msgstr ""
+
+#. Default: "Heading level"
+#: components/schema
+msgid "Heading level"
+msgstr ""

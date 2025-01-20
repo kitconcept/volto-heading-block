@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-28T12:54:28.400Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language: \n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Alignment"
+#: components/schema
+msgid "Alignment"
+msgstr "Alinhamento"
+
+#. Default: "Heading"
+#: components/schema
+msgid "Heading"
+msgstr "Cabeçalho"
+
+#. Default: "Heading level"
+#: components/schema
+msgid "Heading level"
+msgstr "Nível do Cabeçalho"

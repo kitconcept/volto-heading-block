@@ -1,23 +1,34 @@
-# @kitconcept/volto-heading-block
+# Volto Heading Block (@kitconcept/volto-heading-block)
 
-[![NPM](https://img.shields.io/npm/v/@kitconcept/volto-heading-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
-[![Build Status](https://github.com/kitconcept/volto-heading-block/actions/workflows/acceptance.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions)
+A heading block for Volto
+
+[![npm](https://img.shields.io/npm/v/@kitconcept/volto-heading-block)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-heading-block/)
+[![Code analysis checks](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml)
+[![Unit tests](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml)
 
 ![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
 
 The Volto Heading Block allows editors to add a heading to a Volto page.
 
+
+## Features
+
+<!-- List your awesome features here -->
 ## Screenshot
 
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screenshot.png)
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/main/screenshot.png)
 
 ## Screencast
 
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screencast.gif)
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/main/screencast.gif)
 
 ## Installation
+
+To install your project, you must choose the method appropriate to your version of Volto.
+
+
+### Volto 17 and earlier
 
 Create a new Volto project (you can skip this step if you already have one):
 
@@ -27,9 +38,9 @@ yo @plone/volto my-volto-project --addon @kitconcept/volto-heading-block
 cd my-volto-project
 ```
 
-Add `@kitconcept/volto-heading-block`to your package.json:
+Add `@kitconcept/volto-heading-block` to your package.json:
 
-```
+```JSON
 "addons": [
     "@kitconcept/volto-heading-block"
 ],
@@ -45,30 +56,160 @@ Download and install the new add-on by running:
 yarn install
 ```
 
-Start Volto with:
+Start volto with:
 
 ```
 yarn start
 ```
 
-Go to http://localhost:3000, login, create a new page. The heading block will show up in the Volto blocks chooser.
+### Volto 18 and later
 
-## Block configuration
+Add `@kitconcept/volto-heading-block` to your `package.json`:
 
-## `show_alignment`
-
-This option will enable an alignment widget in the block settings, allowing you to align the text of the heading. By default, it is set to `false`.
-
-```js
-config.blocks.blocksConfig.heading.show_alignment = true;
+```json
+"dependencies": {
+    "@kitconcept/volto-heading-block": "*"
+}
 ```
 
-## Credits
+Add `@kitconcept/volto-heading-block` to your `volto.config.js`:
 
-<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-blocks/raw/master/fz-juelich.svg" width="200px" />
+```javascript
+const addons = ['@kitconcept/volto-heading-block'];
+```
 
-The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de).
+If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
-# License
+```javascript
+const theme = '@kitconcept/volto-heading-block';
+```
+
+## Test installation
+
+Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
+
+
+## Development
+
+The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
+For this reason, it only works with pnpm and Volto 18 (currently in alpha).
+
+
+### Pre-requisites
+
+-   [Node.js](https://6.docs.plone.org/install/create-project.html#node-js)
+-   [Make](https://6.docs.plone.org/install/create-project.html#make)
+-   [Docker](https://6.docs.plone.org/install/create-project.html#docker)
+
+
+### Make convenience commands
+
+Run `make help` to list the available commands.
+
+```text
+help                             Show this help
+install                          Installs the add-on in a development environment
+start                            Starts Volto, allowing reloading of the add-on during development
+build                            Build a production bundle for distribution of the project with the add-on
+i18n                             Sync i18n
+ci-i18n                          Check if i18n is not synced
+format                           Format codebase
+lint                             Lint, or catch and remove problems, in code base
+release                          Release the add-on on npmjs.org
+release-dry-run                  Dry-run the release of the add-on on npmjs.org
+test                             Run unit tests
+ci-test                          Run unit tests in CI
+backend-docker-start             Starts a Docker-based backend for development
+storybook-start                  Start Storybook server on port 6006
+storybook-build                  Build Storybook
+acceptance-frontend-dev-start    Start acceptance frontend in development mode
+acceptance-frontend-prod-start   Start acceptance frontend in production mode
+acceptance-backend-start         Start backend acceptance server
+ci-acceptance-backend-start      Start backend acceptance server in headless mode for CI
+acceptance-test                  Start Cypress in interactive mode
+ci-acceptance-test               Run cypress tests in headless mode for CI
+```
+
+### Development environment set up
+
+Install package requirements.
+
+```shell
+make install
+```
+
+### Start developing
+
+Start the backend.
+
+```shell
+make backend-docker-start
+```
+
+In a separate terminal session, start the frontend.
+
+```shell
+make start
+```
+
+### Lint code
+
+Run ESlint, Prettier, and Stylelint in analyze mode.
+
+```shell
+make lint
+```
+
+### Format code
+
+Run ESlint, Prettier, and Stylelint in fix mode.
+
+```shell
+make format
+```
+
+### i18n
+
+Extract the i18n messages to locales.
+
+```shell
+make i18n
+```
+
+### Unit tests
+
+Run unit tests.
+
+```shell
+make test
+```
+
+### Run Cypress tests
+
+Run each of these steps in separate terminal sessions.
+
+In the first session, start the frontend in development mode.
+
+```shell
+make acceptance-frontend-dev-start
+```
+
+In the second session, start the backend acceptance server.
+
+```shell
+make acceptance-backend-start
+```
+
+In the third session, start the Cypress interactive test runner.
+
+```shell
+make acceptance-test
+```
+
+## License
 
 The project is licensed under the MIT license.
+
+## Credits and Acknowledgements 🙏
+
+Crafted with care by **Generated using [Cookieplone (0.8.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (d9b5293)](https://github.com/plone/cookiecutter-plone/commit/d9b52933cbc6efd137e93e35a270214e307359f0) on 2025-01-13 20:01:39.956195**. A special thanks to all contributors and supporters!
