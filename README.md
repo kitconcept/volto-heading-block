@@ -17,11 +17,11 @@ The Volto Heading Block allows editors to add a heading to a Volto page.
 <!-- List your awesome features here -->
 ## Screenshot
 
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screenshot.png)
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/main/screenshot.png)
 
 ## Screencast
 
-![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/master/screencast.gif)
+![Heading-Block](https://github.com/kitconcept/volto-heading-block/raw/main/screencast.gif)
 
 ## Installation
 
