@@ -1,16 +1,16 @@
 # Volto Heading Block (@kitconcept/volto-heading-block)
 
-A heading block for Volto
+The Volto Heading Block allows editors to add a heading to a Volto page.
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-heading-block)](https://www.npmjs.com/package/@kitconcept/volto-heading-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-heading-block/)
 [![Code analysis checks](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-heading-block/actions/workflows/unit.yml)
 
-![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
-
-The Volto Heading Block allows editors to add a heading to a Volto page.
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
 
 ## Features
 
