@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-heading-block",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "volto-heading-block: Volto add-on that provides a configurable heading block",
   "main": "src/index.js",
   "license": "MIT",
@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "@plone/scripts": "^3.6.1",
-    "release-it": "^17.1.1"
+    "release-it": "^19.0.2"
   }
 }

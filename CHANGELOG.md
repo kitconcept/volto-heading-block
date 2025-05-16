@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.4.1 (2025-05-16)
+
+### Internal
+
+- Re-release it for metadata fixes. @sneridagh 
+
 ## 2.4.0 (2023-09-14)
 
 ### Feature
