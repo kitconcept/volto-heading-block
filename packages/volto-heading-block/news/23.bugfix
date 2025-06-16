@@ -1,0 +1,1 @@
+If the heading block on a page is selected, the page properties (text input) on the right side (sidebar) cannot get edited because the cursor keeps jumping back to the heading block. The provided change should fix this. @tomschall
