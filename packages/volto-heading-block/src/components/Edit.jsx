@@ -36,13 +36,20 @@ class HeadingEdit extends React.Component {
     super();
     this.state = {
       html: props.data.heading || '',
+      didSetInitialFocus: false,
     };
   }
 
   editable = React.createRef();
-  componentDidUpdate(prevProps) {
-    if (this.props.selected && this.editable.current) {
+  componentDidUpdate() {
+    // set initial focus when the block gets created or edited
+    if (
+      this.props.selected &&
+      !this.state.didSetInitialFocus &&
+      this.editable.current
+    ) {
       this.editable.current.focus();
+      this.setState({ didSetInitialFocus: true });
     }
   }
 
@@ -79,7 +86,7 @@ class HeadingEdit extends React.Component {
                 e.stopPropagation();
                 this.props.onSelectBlock(
                   this.props.onAddBlock(
-                    config.settings.defaultBlockType,
+                    config.settings?.defaultBlockType,
                     this.props.index + 1,
                   ),
                 );
