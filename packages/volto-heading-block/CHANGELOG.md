@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.4.2 (2025-06-16)
+
+### Bugfix
+
+- If the heading block on a page is selected, the page properties (text input) on the right side (sidebar) cannot get edited because the cursor keeps jumping back to the heading block. The provided change should fix this. @tomschall [#23](https://github.com/kitconcept/volto-heading-block/issue/23)
+
 ## 2.4.1 (2025-05-16)
 
 ### Internal
