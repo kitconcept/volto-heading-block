@@ -1,5 +1,5 @@
 import React from 'react';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
 import cx from 'classnames';
 import config from '@plone/volto/registry';
 
