@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentEditable from 'react-contenteditable';
-import { withBlockExtensions } from '@plone/volto/helpers';
-import { SidebarPortal } from '@plone/volto/components';
+import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import HeadingSidebar from './Sidebar';
 import config from '@plone/volto/registry';
 
