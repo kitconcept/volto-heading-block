@@ -14,6 +14,38 @@ const messages = defineMessages({
     id: 'Alignment',
     defaultMessage: 'Alignment',
   },
+  h2: {
+    id: 'h2',
+    defaultMessage: 'Heading 2',
+  },
+  h3: {
+    id: 'h3',
+    defaultMessage: 'Heading 3',
+  },
+  h4: {
+    id: 'h4',
+    defaultMessage: 'Heading 4',
+  },
+  h5: {
+    id: 'h5',
+    defaultMessage: 'Heading 5',
+  },
+  h6: {
+    id: 'h6',
+    defaultMessage: 'Heading 6',
+  },
+  leftAlignment: {
+    id: 'left',
+    defaultMessage: 'Left',
+  },
+  centerAlignment: {
+    id: 'center',
+    defaultMessage: 'Center',
+  },
+  rightAlignment: {
+    id: 'right',
+    defaultMessage: 'Right',
+  },
 });
 
 export const headingSchema = (props) => {
@@ -22,11 +54,11 @@ export const headingSchema = (props) => {
   const allowed_headings =
     config.blocks?.blocksConfig?.heading?.allowed_headings;
   const DEFAULT_HEADING_LEVELS = [
-    ['h2', 'h2'],
-    ['h3', 'h3'],
-    ['h4', 'h4'],
-    ['h5', 'h5'],
-    ['h6', 'h6'],
+    ['h2', props.intl.formatMessage(messages.h2)],
+    ['h3', props.intl.formatMessage(messages.h3)],
+    ['h4', props.intl.formatMessage(messages.h4)],
+    ['h5', props.intl.formatMessage(messages.h5)],
+    ['h6', props.intl.formatMessage(messages.h6)],
   ];
 
   const filterDefaultLevels = () => {
@@ -62,9 +94,9 @@ export const headingSchema = (props) => {
       alignment: {
         title: props.intl.formatMessage(messages.alignment),
         choices: [
-          ['left', 'left'],
-          ['center', 'center'],
-          ['right', 'right'],
+          ['left', props.intl.formatMessage(messages.leftAlignment)],
+          ['center', props.intl.formatMessage(messages.centerAlignment)],
+          ['right', props.intl.formatMessage(messages.rightAlignment)],
         ],
         default: 'left',
       },

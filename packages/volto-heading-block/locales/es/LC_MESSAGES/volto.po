@@ -1,5 +1,3 @@
-# Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -34,3 +32,43 @@ msgstr "Encabezado"
 #: components/schema
 msgid "Heading level"
 msgstr "Nivel de encabezado"
+
+#. Default: "Center"
+#: components/schema
+msgid "center"
+msgstr "Centro"
+
+#. Default: "Heading 2"
+#: components/schema
+msgid "h2"
+msgstr "Encabezado 2"
+
+#. Default: "Heading 3"
+#: components/schema
+msgid "h3"
+msgstr "Encabezado 3"
+
+#. Default: "Heading 4"
+#: components/schema
+msgid "h4"
+msgstr "Encabezado 4"
+
+#. Default: "Heading 5"
+#: components/schema
+msgid "h5"
+msgstr "Encabezado 5"
+
+#. Default: "Heading 6"
+#: components/schema
+msgid "h6"
+msgstr "Encabezado 6"
+
+#. Default: "Left"
+#: components/schema
+msgid "left"
+msgstr "Izquierda"
+
+#. Default: "Right"
+#: components/schema
+msgid "right"
+msgstr "Derecha"
