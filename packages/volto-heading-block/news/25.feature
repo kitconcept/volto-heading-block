@@ -1,0 +1,1 @@
+Add more improvements about the i18n support for the items' options lists #25 @macagua

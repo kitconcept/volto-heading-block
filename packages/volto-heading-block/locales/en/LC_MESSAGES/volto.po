@@ -25,3 +25,43 @@ msgstr ""
 #: components/schema
 msgid "Heading level"
 msgstr ""
+
+#. Default: "Center"
+#: components/schema
+msgid "center"
+msgstr ""
+
+#. Default: "Heading 2"
+#: components/schema
+msgid "h2"
+msgstr ""
+
+#. Default: "Heading 3"
+#: components/schema
+msgid "h3"
+msgstr ""
+
+#. Default: "Heading 4"
+#: components/schema
+msgid "h4"
+msgstr ""
+
+#. Default: "Heading 5"
+#: components/schema
+msgid "h5"
+msgstr ""
+
+#. Default: "Heading 6"
+#: components/schema
+msgid "h6"
+msgstr ""
+
+#. Default: "Left"
+#: components/schema
+msgid "left"
+msgstr ""
+
+#. Default: "Right"
+#: components/schema
+msgid "right"
+msgstr ""
