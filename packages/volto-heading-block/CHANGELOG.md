@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.5.0 (2025-07-23)
+
+### Feature
+
+- Add Spanish translation #24 @macagua [#24](https://github.com/kitconcept/volto-heading-block/issue/24)
+
 ## 2.4.2 (2025-06-16)
 
 ### Bugfix
