@@ -1,5 +1,5 @@
-# Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2025.
+#. Translation of volto.pot to Spanish
+#. Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -7,12 +7,12 @@ msgstr ""
 "POT-Creation-Date: 2025-01-15T06:06:38.485Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
-"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language: es\n"
-"MIME-Version: 1.0\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8\n"
