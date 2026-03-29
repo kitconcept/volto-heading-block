@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-01-15T06:06:38.485Z\n"
+"POT-Creation-Date: 2025-07-18T11:36:50.708Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -26,4 +26,44 @@ msgstr ""
 #. Default: "Heading level"
 #: components/schema
 msgid "Heading level"
+msgstr ""
+
+#. Default: "Center"
+#: components/schema
+msgid "center"
+msgstr ""
+
+#. Default: "Heading 2"
+#: components/schema
+msgid "h2"
+msgstr ""
+
+#. Default: "Heading 3"
+#: components/schema
+msgid "h3"
+msgstr ""
+
+#. Default: "Heading 4"
+#: components/schema
+msgid "h4"
+msgstr ""
+
+#. Default: "Heading 5"
+#: components/schema
+msgid "h5"
+msgstr ""
+
+#. Default: "Heading 6"
+#: components/schema
+msgid "h6"
+msgstr ""
+
+#. Default: "Left"
+#: components/schema
+msgid "left"
+msgstr ""
+
+#. Default: "Right"
+#: components/schema
+msgid "right"
 msgstr ""
