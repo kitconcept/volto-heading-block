@@ -1,21 +1,25 @@
 import React from 'react';
 import { BlockDataForm } from '@plone/volto/components/manage/Form';
-import { headingSchema } from './schema';
+import config from '@plone/volto/registry';
 import { useIntl } from 'react-intl';
 
 const HeadingData = (props) => {
   const { data, block, onChangeBlock } = props;
   const intl = useIntl();
-  const schema = headingSchema({ ...props, intl });
+  const { blockSchema, dataAdapter } = config.blocks.blocksConfig.heading;
+  const schema = blockSchema({ data, intl });
 
   return (
     <BlockDataForm
       schema={schema}
       title={schema.title}
       onChangeField={(id, value) => {
-        onChangeBlock(block, {
-          ...data,
-          [id]: value,
+        dataAdapter({
+          block,
+          data,
+          id,
+          onChangeBlock,
+          value,
         });
       }}
       formData={data}

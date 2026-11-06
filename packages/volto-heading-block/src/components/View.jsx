@@ -1,6 +1,5 @@
 import React from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
-import cx from 'classnames';
 import config from '@plone/volto/registry';
 
 const HeadingView = (props) => {
@@ -11,7 +10,7 @@ const HeadingView = (props) => {
   return (
     <>
       {data && (
-        <div className={cx('block heading', className)}>
+        <div className={['block heading', className].filter(Boolean).join(' ')}>
           <div className="heading-wrapper">
             <Element
               style={show_alignment ? { textAlign: data.alignment } : {}}

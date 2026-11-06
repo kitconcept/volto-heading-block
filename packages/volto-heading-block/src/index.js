@@ -1,6 +1,8 @@
 import headingSVG from '@plone/volto/icons/heading.svg';
 import HeadingViewBlock from './components/View';
 import HeadingEditBlock from './components/Edit';
+import { headingSchema } from './components/schema';
+import { headingDataAdapter } from './components/adapter';
 import './theme/main.less';
 
 const applyConfig = (config) => {
@@ -11,6 +13,8 @@ const applyConfig = (config) => {
     group: 'text',
     view: HeadingViewBlock,
     edit: HeadingEditBlock,
+    blockSchema: headingSchema,
+    dataAdapter: headingDataAdapter,
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
