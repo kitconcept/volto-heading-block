@@ -1,1 +1,0 @@
-Added the schema and the documentation of the heading block to the `@blocks-schema` endpoint of Volto 19.6 or later, so agents and reference documentation can describe the block. The settings form now stores its changes through a data adapter. @ericof

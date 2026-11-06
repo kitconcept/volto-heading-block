@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.6.0 (2026-11-06)
+
+### Feature
+
+- Added the schema and the documentation of the heading block to the `@blocks-schema` endpoint of Volto 19.6 or later, so agents and reference documentation can describe the block. The settings form now stores its changes through a data adapter. @ericof [#30](https://github.com/kitconcept/volto-heading-block/issue/30)
+
 ## 2.5.0 (2025-07-23)
 
 ### Feature
