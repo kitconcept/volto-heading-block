@@ -79,6 +79,8 @@ Add `@kitconcept/volto-heading-block` to your `volto.config.js`:
 const addons = ['@kitconcept/volto-heading-block'];
 ```
 
+The `@blocks-schema` endpoint of Volto, which publishes the schema and documentation of the block, needs Volto 19.6 or later. The add-on keeps working on earlier Volto 19 releases, without that endpoint.
+
 If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
 ```javascript
@@ -93,7 +95,7 @@ Visit http://localhost:3000/ in a browser, login, and check the awesome new feat
 ## Development
 
 The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
-For this reason, it only works with pnpm and Volto 18 (currently in alpha).
+For this reason, it only works with pnpm and Volto 19.
 
 
 ### Pre-requisites
